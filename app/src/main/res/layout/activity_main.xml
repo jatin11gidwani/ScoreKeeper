@@ -219,29 +219,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
-                        android:text="@string/s1"
                         android:layout_centerHorizontal="true"
+                        android:text="@string/s1"
                         android:textColor="@color/b" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_above="@+id/line"
-                        android:layout_centerHorizontal="true"
-                        android:layout_height="wrap_content">
+                        android:layout_centerHorizontal="true">
+
                         <Button
                             android:id="@+id/reset_BB"
                             style="@style/ResetButtonStyle"
                             android:onClick="BB_Reset"
-                            android:text="@string/r"
-                            />
+                            android:text="@string/r" />
+
                         <Button
                             android:id="@+id/undo_BB"
                             style="@style/ResetButtonStyle"
                             android:onClick="Bb_Undo"
-                            android:text="@string/undo"
-                            />
+                            android:text="@string/undo" />
                     </LinearLayout>
-
 
 
                 </RelativeLayout>
@@ -407,6 +406,7 @@
                         style="@style/ResetButtonStyle"
                         android:layout_above="@+id/line2"
                         android:onClick="FB_Reset"
+                        android:layout_centerHorizontal="true"
                         android:text="@string/r" />
 
                     <View
