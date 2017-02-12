@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="bb">BASKETBALL</string>
+    <string name="fb">FOOTBALL</string>
+    <string name="s1">SWIPE LEFT FOR FOOTBALL</string>
+    <string name="s2">SWIPE RIGHT FOR BASKETBALL</string>
+    <string name="r">RESET</string>
+    <string name="undo">UNDO</string>
+    <string name="ta">TEAM A</string>
+    <string name="tb">TEAM B</string>
+    <string name="s">SCORE</string>
+    <string name="f">FOULS</string>
+    <string name="g">GOAL</string>
+    <string name="fo">FOUL</string>
+    <string name="b2">+2 Points</string>
+    <string name="b3">+3 Points</string>
+    <string name="b1">Free Throw</string>
+    <string name="initial">0</string>
+
+</resources>

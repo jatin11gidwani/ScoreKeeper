@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    tools:context="com.example.skoop.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ParentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/Hori_LL_FB_BB"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/RR_BB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/BB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/bb"
+                        android:textColor="@color/b"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/LL_Score_BB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BB"
+                        android:layout_marginBottom="80dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/LL_Score_BB_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team_BB_A"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/ta"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/BB_Score_A"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/score_BB_A_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/s"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/BB_Foul_A"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/foulA_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/f"
+                                android:textSize="27sp" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_A_2Point"
+                                android:text="@string/b2" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_A_3Point"
+                                android:text="@string/b3" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_A_FreeThrow"
+                                android:text="@string/b1" />
+
+                            <Button
+                                style="@style/ButtonStyleFoul"
+                                android:onClick="BB_Foul_A"
+                                android:text="@string/fo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LL_Score_BB_B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team_BB_B"
+                                android:layout_width="202dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/tb"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/BB_Score_B"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/score_BB_B_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/s"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/BB_Foul_B"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/foulB_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/f"
+                                android:textSize="27sp" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_B_2Point"
+                                android:text="@string/b2" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_B_3Point"
+                                android:text="@string/b3" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="BB_Score_B_FreeThrow"
+                                android:text="@string/b1" />
+
+                            <Button
+                                style="@style/ButtonStyleFoul"
+                                android:onClick="BB_Foul_B"
+                                android:text="@string/fo" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="380dp"
+                        android:layout_height="2dp"
+                        android:layout_above="@+id/swipe1"
+                        android:layout_centerInParent="true"
+                        android:background="@color/b" />
+
+                    <TextView
+                        android:id="@+id/swipe1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/s1"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/b" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_above="@+id/line"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/reset_BB"
+                            style="@style/ResetButtonStyle"
+                            android:onClick="BB_Reset"
+                            android:text="@string/r"
+                            />
+                        <Button
+                            android:id="@+id/undo_BB"
+                            style="@style/ResetButtonStyle"
+                            android:onClick="Bb_Undo"
+                            android:text="@string/undo"
+                            />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RR_FB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/FB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/fb"
+                        android:textColor="@color/b"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/LL_Score_FB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/FB"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/LL_FB_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/teamA"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/ta"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/FB_Score_A"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/scoreA_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/s"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/FB_Foul_A"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/foul_FB_A_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/f"
+                                android:textSize="27sp" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="FB_Score_A"
+                                android:text="@string/g" />
+
+                            <Button
+                                style="@style/ButtonStyleFoul"
+                                android:onClick="FB_Foul_A"
+                                android:text="@string/fo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Ll_FB_B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/teamB"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/tb"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/FB_Score_B"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/scoreB_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/s"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/FB_Foul_B"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/initial"
+                                android:textColor="@color/b"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/foul_FB_B_text"
+                                android:layout_width="182dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/f"
+                                android:textSize="27sp" />
+
+                            <Button
+                                style="@style/ScoreButtonStyle"
+                                android:onClick="FB_Score_B"
+                                android:text="@string/g" />
+
+                            <Button
+                                style="@style/ButtonStyleFoul"
+                                android:onClick="FB_Foul_B"
+                                android:text="@string/fo" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        style="@style/ResetButtonStyle"
+                        android:layout_above="@+id/line2"
+                        android:onClick="FB_Reset"
+                        android:text="@string/r" />
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="380dp"
+                        android:layout_height="2dp"
+                        android:layout_above="@+id/swipeR"
+                        android:layout_centerInParent="true"
+                        android:background="@color/b" />
+
+                    <TextView
+                        android:id="@+id/swipeR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/s2"
+                        android:textColor="@color/b" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>
