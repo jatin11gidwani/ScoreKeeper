@@ -238,7 +238,7 @@
                         <Button
                             android:id="@+id/undo_BB"
                             style="@style/ResetButtonStyle"
-                            android:onClick="Bb_Undo"
+                            android:onClick="BB_Undo"
                             android:text="@string/undo" />
                     </LinearLayout>
 
@@ -402,12 +402,24 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <Button
-                        style="@style/ResetButtonStyle"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_above="@+id/line2"
-                        android:onClick="FB_Reset"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/r" />
+                        android:layout_centerHorizontal="true">
+
+                        <Button
+                            android:id="@+id/reset_FB"
+                            style="@style/ResetButtonStyle"
+                            android:onClick="FB_Reset"
+                            android:text="@string/r" />
+
+                        <Button
+                            android:id="@+id/undo_FB"
+                            style="@style/ResetButtonStyle"
+                            android:onClick="FB_Undo"
+                            android:text="@string/undo" />
+                    </LinearLayout>
 
                     <View
                         android:id="@+id/line2"
